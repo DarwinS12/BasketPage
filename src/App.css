@@ -1,0 +1,529 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.header-nav {
+  background-color: #242424d8;
+  width: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  z-index: 8;
+
+  border: 2px solid #fafafa10;
+  padding: 8px;
+
+  animation: scroll-h1 linear both;
+  animation-timeline: scroll(root block);
+  animation-range: 0 800px;
+  backdrop-filter: blur(5px);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@keyframes scroll-h1 {
+  to {
+    background: rgb(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px);
+    font-size: 19px;
+    color: black;
+  }
+}
+
+.header-nav button {
+  font-size: large;
+  margin: 8px 24px;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  padding: 4px;
+  animation: scroll-button linear both;
+  animation-timeline: scroll(root block);
+  animation-range: 0 500px;
+  transition: 0.3s all;
+}
+
+.header-nav button:hover {
+  background-color: rgba(220, 220, 220, 0.116);
+  border-radius: 4px;
+  transform: scale(1.1);
+  transition: 0.1s all;
+}
+
+@keyframes scroll-button {
+  to {
+    font-size: 19px;
+    color: black;
+  }
+}
+
+.homePage-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  column-gap: 48px;
+  row-gap: 48px;
+  padding: 24px;
+  /* background-color: rgba(255, 255, 255, 0.1); */
+  background-color: rgba(143, 143, 143, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  backdrop-filter: blur(1em);
+}
+
+.homePage-container article {
+  user-select: none;
+}
+
+.btn-option {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  padding: 8px;
+}
+
+.btn-option:hover {
+  background-color: rgba(136, 136, 136, 0.171);
+  border-radius: 8px;
+  transform: scale(1.1);
+  transition: all 0.1s;
+}
+
+.teams-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  list-style: none;
+  margin-top: 80px;
+  padding: 8px;
+}
+
+.li-list {
+  display: flex;
+  align-items: center;
+  margin: 16px;
+  padding: 8px;
+  justify-content: center;
+  background-color: rgba(143, 143, 143, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  backdrop-filter: blur(1em);
+}
+
+.btn-teams-option {
+  margin-bottom: 6px;
+  margin-left: 8px;
+}
+
+.statisticsTeam-container {
+  background-color: rgba(143, 143, 143, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  backdrop-filter: blur(1em);
+}
+
+.statisticsInfo span {
+  color: rgba(255, 192, 203, 0.849);
+}
+
+.statistics-article {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  column-gap: 48px;
+  row-gap: 48px;
+  padding: 24px;
+}
+
+.team-logo {
+  margin-top: 95px;
+}
+.resize {
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+.section-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.section-info span {
+  color: rgba(0, 0, 0, 0.671);
+}
+
+.info-contaier {
+  background-color: rgba(143, 143, 143, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  margin-top: 80px;
+  padding: 24px;
+  backdrop-filter: blur(1em);
+}
+.info-contaier input {
+  background-color: rgba(255, 255, 255, 0.349);
+  color: black;
+  border: 1px solid rgba(0, 0, 0, 0.801);
+  border-radius: 8px;
+  font-size: larger;
+  padding: 4px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.527);
+  user-select: none;
+
+  transition: all 0.3s;
+}
+
+.info-contaier input:focus {
+  border: 1px solid black !important;
+  background-color: rgba(255, 255, 255, 0.486);
+  outline: none;
+  user-select: none;
+  transition: all 0.1s;
+}
+
+.info-contaier input::placeholder {
+  color: rgba(0, 0, 0, 0.603);
+}
+
+.searchPlayer-main-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  column-gap: 48px;
+  row-gap: 48px;
+  padding: 24px;
+}
+
+.searchPlayers-li-container {
+  list-style: none;
+  background-color: rgba(0, 0, 0, 0.26);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.623);
+  border-radius: 10px;
+  padding: 8px;
+  overflow: hidden;
+  position: relative;
+  backdrop-filter: blur(1em);
+}
+
+.select-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 32px;
+  gap: 48px;
+  position: relative;
+}
+
+.standings-main-container {
+  display: grid;
+  user-select: none;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  column-gap: 48px;
+  row-gap: 48px;
+  padding: 24px;
+}
+.standings-main-container span {
+  color: rgba(0, 0, 0, 0.671);
+}
+
+#season-select .MuiMenu-paper {
+  overflow-y: scroll !important;
+}
+
+.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: rgba(0, 0, 0, 0.507) !important;
+}
+
+.iconVol {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  margin: 80px;
+  padding: 24px;
+
+  border-radius: 10px;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(255, 255, 255, 0.055);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.623);
+
+  overflow: hidden;
+  backdrop-filter: blur(1em);
+}
+.noFound-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+/*Musica*/
+
+.container-Music {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: start;
+  gap: 8px;
+
+  padding: 4px;
+
+  border-radius: 8px;
+  padding: 32px;
+}
+
+.header-mainContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 48px;
+}
+
+.container-Music header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.container-Music header h4,
+.container-Music header p {
+  margin-bottom: 0px;
+  width: 100px;
+  margin-top: 8px;
+}
+
+.container-Music header p {
+  color: rgba(255, 255, 255, 0.753);
+}
+
+.container-Music header h4 {
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 98px;
+}
+
+.container-Music header img {
+  width: 160px;
+  border-radius: 4px;
+  box-shadow: 0px 0px 30px black;
+}
+
+.container-Music main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 16px;
+  padding: 0;
+  gap: 50px;
+}
+
+.buttonOutline {
+  background-color: transparent;
+  border-radius: 8px;
+  border: none;
+  padding: 8px;
+  margin: 16px;
+  transition: all 0.3s;
+  opacity: 85%;
+}
+
+.buttonOutline:hover {
+  background-color: rgba(220, 220, 220, 0.082);
+  transform: scale(1.1);
+  transition: all 0.2s;
+  opacity: 100%;
+}
+
+.buttonOutline:disabled:hover {
+  cursor: default;
+  transform: none;
+  background-color: transparent;
+}
+
+.container-Music footer {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 16px;
+  gap: 50px;
+}
+
+.container-Music footer div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.container-Music footer div span {
+  margin-right: 8px;
+}
+
+.songDuration-span {
+  opacity: 90%;
+}
+
+@media screen and (max-width: 600px) {
+  .header-nav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .header-nav-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .header-nav button {
+    margin: 8px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .homePage-container {
+    grid-template-columns: 1fr;
+  }
+  .teamsPage-container {
+    margin-top: 280px;
+    grid-template-columns: 1fr;
+  }
+  .resize {
+    margin-top: 20px !important;
+  }
+  .teams-list {
+    margin-top: 350px;
+    grid-template-columns: 1fr;
+  }
+  .statisticsTeam-container {
+    margin-top: 400px;
+    padding: 16px;
+  }
+  .statistics-article {
+    grid-template-columns: 1fr;
+  }
+  .team-logo {
+    margin-top: 400px;
+  }
+  .info-contaier {
+    margin-top: 360px;
+    padding: 8px;
+  }
+  .searchPlayer-main-container {
+    grid-template-columns: 1fr;
+  }
+  .standings-main-container {
+    grid-template-columns: 1fr;
+  }
+  .iconVol {
+    margin-bottom: 60px;
+    margin-left: 4px;
+    width: 40px;
+    height: 40px;
+    padding: 12px;
+  }
+  .container-Music {
+    display: grid;
+  }
+  .container-Music {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 16px;
+    border-radius: 8px;
+  }
+
+  .header-mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .container-Music header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .container-Music header h4,
+  .container-Music header p {
+    margin-bottom: 0px;
+    width: auto;
+    margin-top: 8px;
+  }
+
+  .container-Music header h4 {
+    max-width: 150px;
+  }
+
+  .container-Music header img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 10px black;
+  }
+
+  .container-Music main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    margin-top: 16px;
+  }
+
+  .buttonOutline {
+    background-color: transparent;
+    border-radius: 8px;
+    border: none;
+    padding: 8px;
+    margin: 8px;
+    transition: all 0.3s;
+    opacity: 85%;
+  }
+
+  .container-Music footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 16px;
+    gap: 24px;
+  }
+
+  .container-Music footer div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .container-Music footer div span {
+    margin-right: 8px;
+  }
+
+  .songDuration-span {
+    opacity: 90%;
+  }
+}
