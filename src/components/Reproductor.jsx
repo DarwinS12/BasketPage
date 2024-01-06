@@ -36,7 +36,7 @@ export function Reproductor() {
   };
 
   useEffect(() => {
-    songRef.current.src = `../src/music/1/0${songToPlay}.mp3`;
+    songRef.current.src = `../src/music/1/0${songToPlay}.mp3`; // una buena pratica es definir este string en un archivo json o un archivo separado donde se tienen las rutas
   }, [songToPlay]);
 
   const handlePlaySong = () => {
