@@ -2,7 +2,7 @@ import { IoHeartOutline, IoHeartSharp } from "react-icons/io5";
 import { Checkbox, Box, Tooltip } from "@mui/material";
 import { usePlayersStore } from "../store/players";
 
-export function PlayerInfo({ type, playerInfo }) {
+export function PlayerInfo({ type, playerInfo }) { // Igual aca, es bueno hacer una validacion de los props poniendo el tipo de dato
 
   const setPlayerLiked = usePlayersStore((state) => state.setPlayerLiked)
   const isPlayerLiked = usePlayersStore((state) => state.isPlayerLiked)
