@@ -40,16 +40,16 @@ export function Reproductor() {
   }, [songToPlay]);
 
   const handlePlaySong = () => {
-    if (isPlaying) {
+    if (isPlaying) { 
       songRef.current.pause();
-      setIsPlaying(false);
+      setIsPlaying(false); // cual es la razon para tener esta linea ?
     } else {
       songRef.current.play();
       setCurrentSong(songs);
-      setIsPlaying(true);
+      setIsPlaying(true); // cual es la razon para tener esta linea ?
     }
 
-    setIsPlaying(!isPlaying);
+    setIsPlaying(!isPlaying); // esta linea cubre los dos escenarios, si isPlaying es falso, aqui lo establece como verdadero o vicerversa
   };
 
   return (
