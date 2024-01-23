@@ -3,7 +3,7 @@ import { useSEO } from "../hooks/useSEO";
 
 export function HomePage() {
   useSEO({
-    title: "NBA Information",
+    title: "NBA Tracking Page",
     img: "../src/assets/NBA-logo-min.png",
   });
 

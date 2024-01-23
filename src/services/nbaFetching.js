@@ -1,4 +1,4 @@
-const apiKey = import.meta.env.VITE_X_RAPID_API_KEY;
+const apiKey = import.meta.env.VITEXRAPIDAPIKEY;
 
 export const getTeams = async () => {
   try {

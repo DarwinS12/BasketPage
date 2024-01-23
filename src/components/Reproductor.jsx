@@ -37,18 +37,20 @@ export function Reproductor() {
   };
 
   useEffect(() => {
-    songRef.current.src = `../src/music/1/0${songToPlay}.mp3`;
+    songRef.current.src = `../src/music/1/0${songToPlay}.mp3`; // una buena pratica es definir este string en un archivo json o un archivo separado donde se tienen las rutas
   }, [songToPlay]);
 
   const handlePlaySong = () => {
-    if (isPlaying) {
+    if (isPlaying) { 
       songRef.current.pause();
+      setIsPlaying(false);
     } else {
       songRef.current.play();
       setCurrentSong(songs);
+      setIsPlaying(true);
     }
 
-    setIsPlaying(!isPlaying);
+    setIsPlaying(!isPlaying); // esta linea cubre los dos escenarios, si isPlaying es falso, aqui lo establece como verdadero o vicerversa
   };
 
   return (
