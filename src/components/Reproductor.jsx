@@ -8,6 +8,7 @@ import { useMusicStore } from "../store/music";
 import { useRef } from "react";
 import { songs } from "./data";
 
+
 const style = {
   position: "absolute",
   top: "50%",
@@ -42,11 +43,9 @@ export function Reproductor() {
   const handlePlaySong = () => {
     if (isPlaying) {
       songRef.current.pause();
-      setIsPlaying(false);
     } else {
       songRef.current.play();
       setCurrentSong(songs);
-      setIsPlaying(true);
     }
 
     setIsPlaying(!isPlaying);

@@ -1,7 +1,6 @@
 import { SongDuration } from "./SongDuration";
 import { CurrentSong } from "./CurrentSong";
 import { ButtonsControler } from "./ButtonsControler";
-
 import { VolumeControler } from "./VolumeControler";
 
 export function Music({
