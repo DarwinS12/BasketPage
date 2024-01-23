@@ -1,7 +1,12 @@
 import { useTeams } from "../hooks/useTeams";
 import { TeamsInfo } from "../components/TeamsInfo";
+import { useSEO } from "../hooks/useSEO";
 
 export function TeamsPage() {
+  useSEO({
+    title: "Teams",
+    img: "../src/assets/NBA-logo-min.png",
+  });
   const { data: teamsPage, isError, isLoading } = useTeams();
 
   if (isLoading) {

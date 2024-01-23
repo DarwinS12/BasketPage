@@ -2,9 +2,7 @@ import { create } from "zustand";
 
 export const usePlayersStore = create((set, get) => ({
   playersLiked: [],
-
   isPlayerLiked: {},
-
   setPlayerLiked: (player) => {
     const { playersLiked, isPlayerLiked } = get();
     const playerIndex = playersLiked.find(
@@ -13,7 +11,6 @@ export const usePlayersStore = create((set, get) => ({
     const playerFiltered = playersLiked.filter(
       (newPlayer) => newPlayer.id !== player.id
     );
-
     if (!playerIndex) {
       set((state) => ({
         playersLiked: [

@@ -10,10 +10,9 @@
   /* background: url("https://images.pexels.com/photos/680074/pexels-photo-680074.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
  */
 
- background: url("https://images.pexels.com/photos/2277978/pexels-photo-2277978.jpeg");
- background-size: cover;
- background-attachment: fixed;
-
+  background: url("https://images.pexels.com/photos/2277978/pexels-photo-2277978.jpeg");
+  background-size: cover;
+  background-attachment: fixed;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -28,4 +27,3 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
-

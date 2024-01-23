@@ -1,3 +1,5 @@
+const apiKey = import.meta.env.VITE_XRAPIDAPIKEY;
+
 export const getTeams = async () => {
   try {
     const response = await fetch("http://localhost:5173/datos.json");
@@ -15,8 +17,7 @@ export const getStatistics = async (teamId) => {
       {
         method: "GET",
         headers: {
-          "X-RapidAPI-Key":
-            "4ec5a18d0amsh4bc0405950627b5p1514e1jsn90a20fd4cac4",
+          "X-RapidAPI-Key": apiKey,
           "X-RapidAPI-Host": "api-nba-v1.p.rapidapi.com",
         },
       }
@@ -35,8 +36,7 @@ export const getTeamPlayers = async (teamId) => {
       {
         method: "GET",
         headers: {
-          "X-RapidAPI-Key":
-            "4ec5a18d0amsh4bc0405950627b5p1514e1jsn90a20fd4cac4",
+          "X-RapidAPI-Key": apiKey,
           "X-RapidAPI-Host": "api-nba-v1.p.rapidapi.com",
         },
       }
@@ -55,8 +55,7 @@ export const getSearchPlayers = async (playerName) => {
       {
         method: "GET",
         headers: {
-          "X-RapidAPI-Key":
-            "4ec5a18d0amsh4bc0405950627b5p1514e1jsn90a20fd4cac4",
+          "X-RapidAPI-Key": apiKey,
           "X-RapidAPI-Host": "api-nba-v1.p.rapidapi.com",
         },
       }
@@ -75,8 +74,7 @@ export const getStandings = async ({ season, conference }) => {
       {
         method: "GET",
         headers: {
-          "X-RapidAPI-Key":
-            "4ec5a18d0amsh4bc0405950627b5p1514e1jsn90a20fd4cac4",
+          "X-RapidAPI-Key": apiKey,
           "X-RapidAPI-Host": "api-nba-v1.p.rapidapi.com",
         },
       }
